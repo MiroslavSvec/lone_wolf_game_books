@@ -1,0 +1,32 @@
+/* Landscape SmartPhones */
+
+@media (min-width: 640px) and (orientation: landscape) {
+	
+}
+
+/* sm Screens */
+
+@media (min-width: 350px) {
+	
+    
+}
+
+@media (max-width: 768px) {
+    .icon-border {
+		opacity: 1;
+	}
+}
+
+/* lg Screens */
+
+@media (max-width: 1024px) {
+    .content {
+		padding: 100px 0px 250px; 
+	}
+}
+
+/* xl Screens */
+
+@media (min-width: 1400px) {
+
+}
