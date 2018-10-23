@@ -29,6 +29,7 @@
 	<nav class="container-fluid">
 		<!-- Pc Button / Navbar -->
 		<div class="navbar row">
+			{% block nav %}
 			<div class="icon-wrapper col-xs-2 col-sm-1 col-sm-offset-4	col-md-offset-5">
 				<div class="icon-border">
 					<button class="btn">
@@ -63,7 +64,8 @@
 						<img src="/static/img/pokus/setting.png" alt="" srcset="">
 					</button>
 				</div>
-			</div>			
+			</div>
+			{% endblock nav %}			
 		</div>
 	</nav>
 

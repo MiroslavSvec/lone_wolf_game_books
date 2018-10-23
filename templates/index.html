@@ -1,0 +1,108 @@
+{% extends "base.html" %}
+
+{% block css %}
+<style>
+	body {
+		background: url("/static/img/index-background.png") no-repeat center;
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+		background-size: cover;
+		height: 100vh;
+	}
+	#index {
+		position: absolute;
+		width: 100%;
+		top: 45%;
+		
+	}
+	#index hr {
+		border: 0;
+	}
+	.btn {		
+		padding: 10px 0px;
+		background: url("/static/img/btn/red_def.png") no-repeat center;
+		-webkit-background-size: contain;
+		-moz-background-size: contain;
+		-o-background-size: contain;
+		background-size: contain;
+		min-width: 135px;
+		min-height: 45px;
+		color: #ffffff;
+	}
+	.btn:hover,
+	.btn:focus {
+		padding: 10px 0px;
+		background: url("/static/img/btn/red_def_hover.png") no-repeat center;		
+		-webkit-background-size: contain;
+		-moz-background-size: contain;
+		-o-background-size: contain;
+		background-size: contain;
+		min-width: 135px;
+		min-height: 45px;
+		color: #ffffff;
+	}
+</style>
+{% endblock css %}
+
+{% block nav %}
+
+{% endblock nav %}
+
+{% block main_content %}
+<section class="container-fluid">
+	<div class="row">
+		<div id="index" class="container-fluid">			
+			{% if session.user %}
+			<div class="row">
+				<div class="col-xs-12 text-center">
+					<a class="btn" href="#">Continue</a>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xs-12 text-center">
+					<a class="btn" href="#">Log Out</a>
+				</div>
+			</div>
+			{% else %}
+			<div class="row">
+				<div class="col-xs-12 text-center">
+					<a class="btn" href="#">Login</a>
+				</div>
+			</div>
+			<hr>
+			<div class="row">
+				<div class="col-xs-12 text-center">
+					<a class="btn" href="#">Register</a>
+				</div>
+			</div>
+			{% endif %}
+		</div>
+	</div>
+</section>
+{% endblock main_content %}
+
+
+<!--
+<form>
+	<div class="form-group">
+		<label for="exampleInputEmail1">Email address</label>
+		<input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+	</div>
+	<div class="form-group">
+		<label for="exampleInputPassword1">Password</label>
+		<input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+	</div>
+	<div class="form-group">
+		<label for="exampleInputFile">File input</label>
+		<input type="file" id="exampleInputFile">
+		<p class="help-block">Example block-level help text here.</p>
+	</div>
+	<div class="checkbox">
+		<label>
+			<input type="checkbox"> Check me out
+		</label>
+	</div>
+	<button type="submit" class="btn btn-default">Submit</button>
+</form>
+-->

@@ -23,11 +23,8 @@ def index():
     if request.method == "POST":
         pass
     else:        
-        book = book_collection.find(
-
-			
-		)
-        return render_template('base.html', book=book)
+        book = book_collection.find()
+        return render_template('index.html', book=book)
 
 
 if __name__ == '__main__':

@@ -14,3 +14,4 @@ However I lost around 70 pushes accross 3 branches in total.
 - Initial commit
 - Added fundamentals for Flask back-end
 - Restored all the previous work and merge it to this repository
+- Created fundamentals for index.html
