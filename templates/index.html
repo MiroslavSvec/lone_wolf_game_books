@@ -3,19 +3,50 @@
 {% block css %}
 <style>
 	body {
-		background: url("/static/img/index-background.png") no-repeat center;
+		background: url("/static/img/main.png") no-repeat center;
 		-webkit-background-size: cover;
 		-moz-background-size: cover;
 		-o-background-size: cover;
 		background-size: cover;
 		height: 100vh;
 	}
-	#index {
+	#main {
+		background: url("/static/img/index-frame.png") no-repeat center;
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+		background-size: cover;
+	}
+	#index,
+	#log-in-form,
+	#register-form {
 		position: absolute;
 		width: 100%;
-		top: 45%;
+		top: 45%
 		
+	}
+	#log-in-form,
+	#register-form {
+		display: none;
+	}
+	#log-in-form {
+		top: 40%;		
+	}
+
+	#register-form {
+		top: 35%;
+	}
+	section {
+		width: 100%;
+		height: 100vh;
+		background: url("/static/img/index-scroll.png") no-repeat center;
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+		background-size: cover;		
 	}	
+
+	
 	.btn {		
 		background: url("/static/img/btn/red_def.png") no-repeat center;
 		-webkit-background-size: contain;
@@ -41,47 +72,8 @@
 		min-width: 135px;
 		min-height: 45px;
 		color: #f1b662;	
-	}
-	#log-in-form,
-	#register-form {
-		display: none;
-		position: absolute;
-		width: 20%;
-		top: 35%;
-	}
-	#log-in-form {
-		top: 40%;		
-	}
-	#index hr {
-		border: 0;
-	}
-	.form-group {
-		text-align: center;
-	}
-	.form-control {
-		padding: 20px 15px;	
-		width: 226px;
-		max-height: 50px;
-		background: url("/static/img/pokus/input_background.png") no-repeat center !important;	
-		-webkit-background-size: contain;
-		-moz-background-size: contain;
-		-o-background-size: contain;
-		background-size: contain;
-		color: #f1b662 !important;		
-		text-align: center !important;	
-
-	}
-	.form-control,
-	.form-control:hover,
-	.form-control:focus,
-	.form-control:active {
-		box-shadow: inset 0 1px 1px rgba(0,0,0,0), 0 0 8px rgba(102, 175, 233, 0);
-		border: transparent;
-	}
-	label {
-		color: #ffffff;
-		font-weight: 500;
-	}
+	}	
+	
 </style>
 {% endblock css %}
 

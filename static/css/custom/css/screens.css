@@ -9,21 +9,9 @@
 }
 
 @media (max-width: 1023px) {
-	#log-in-form,
-	#register-form {
-		min-width: 50%;
-		left: 20%;
-	}
 	#register-form .form-group{
-		margin: 0;
-	}
-	#register-form button,
-	#log-in-form button {
-		margin: 0px 45px;
-	}
-	/* #main button {
-		margin: 0px;
-	} */
+		margin-bottom: 0;
+	} 
 	.icon-border {
 		opacity: 1;
 	}
@@ -32,17 +20,7 @@
 /* lg Screens */
 
 @media (min-width: 1024px) {
-	#log-in-form,
-	#register-form {
-		left: 40%;
-	}
-	.form-control {
-		margin-left: 20%
-	}
-	/* .content {
-		padding: 100px 0px 250px; 
-		    /* margin-left: 20%
-	} */
+	
 }
 
 /* xl Screens */
