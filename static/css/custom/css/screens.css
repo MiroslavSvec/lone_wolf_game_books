@@ -12,14 +12,18 @@
 	#log-in-form,
 	#register-form {
 		min-width: 50%;
-		left: 25%;
+		left: 20%;
 	}
 	#register-form .form-group{
 		margin: 0;
 	}
-	#main button {
-		margin: 0px;
+	#register-form button,
+	#log-in-form button {
+		margin: 0px 45px;
 	}
+	/* #main button {
+		margin: 0px;
+	} */
 	.icon-border {
 		opacity: 1;
 	}
