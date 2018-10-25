@@ -1,0 +1,40 @@
+
+<!-- Log in form -->
+<div id="log-in-form">
+	<form method="POST" action="/login">
+		<div class="form-group">
+			<input type="text" name="user_name" autocomplete="off" class="form-control col-sm-offset-3 col-sm-offset-3"
+			 placeholder="Account name" required>
+		</div>
+		<div class="form-group">
+			<input type="password" name="password" class="form-control col-sm-offset-3 col-md-offset-3" placeholder="Password" required>
+		</div>
+		<div class="form-group">
+			<button type="submit" class="btn">Submit</button>
+		</div>
+	</form>
+	<button onclick="fade_out_in('#log-in-form', 700, true, '#index')" class="btn">Back</button>
+</div>
+
+<!-- Register form -->
+<div id="register-form" class="text-center">
+	<form method="POST">
+		<div class="form-group">
+			<input type="text" name="user_name" autocomplete="off" class="form-control col-sm-offset-3 col-sm-offset-3"
+			 placeholder="User name" required>
+		</div>
+		<div class="form-group">
+			<input type="email" name="email" autocomplete="off" class="form-control col-sm-offset-3 col-sm-offset-3" placeholder="Email">
+		</div>
+		<div class="form-group">
+			<input type="password" name="password" class="form-control col-sm-offset-3 col-md-offset-3" placeholder="Password" required>
+		</div>
+		<div class="form-group">
+			<input type="password" name="re_password" class="form-control col-sm-offset-3 col-md-offset-3" placeholder="Repeat password" required>
+		</div>
+		<div class="form-group">
+			<button type="submit" class="btn">Submit</button>
+		</div>
+	</form>
+	<button onclick="fade_out_in('#register-form', 700, true, '#index')" class="btn">Back</button>
+</div>

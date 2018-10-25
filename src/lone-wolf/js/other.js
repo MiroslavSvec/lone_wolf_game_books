@@ -20,3 +20,15 @@ function is_in_it(array, element) {
 	}
 }
 
+// Fade Out and In helper function
+function fade_out_in(element, speed, fade_in, fade_in_ele) {
+	$(element).fadeOut(speed)
+	if (fade_in) {
+		setTimeout(function() {
+			$(fade_in_ele).fadeIn(speed);
+		}, speed);		
+	}
+}
+
+
+

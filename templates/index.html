@@ -15,32 +15,72 @@
 		width: 100%;
 		top: 45%;
 		
-	}
-	#index hr {
-		border: 0;
-	}
+	}	
 	.btn {		
-		padding: 10px 0px;
 		background: url("/static/img/btn/red_def.png") no-repeat center;
 		-webkit-background-size: contain;
 		-moz-background-size: contain;
 		-o-background-size: contain;
 		background-size: contain;
+		padding: 10px 6px;
+		opacity: 0.9;
 		min-width: 135px;
 		min-height: 45px;
-		color: #ffffff;
+		color: #f1b662;	
+		
 	}
 	.btn:hover,
 	.btn:focus {
-		padding: 10px 0px;
 		background: url("/static/img/btn/red_def_hover.png") no-repeat center;		
 		-webkit-background-size: contain;
 		-moz-background-size: contain;
 		-o-background-size: contain;
 		background-size: contain;
+		padding: 10px 6px;
+		opacity: 1;
 		min-width: 135px;
 		min-height: 45px;
+		color: #f1b662;	
+	}
+	#log-in-form,
+	#register-form {
+		display: none;
+		position: absolute;
+		width: 20%;
+		top: 35%;
+	}
+	#log-in-form {
+		top: 40%;		
+	}
+	#index hr {
+		border: 0;
+	}
+	.form-group {
+		text-align: center;
+	}
+	.form-control {
+		padding: 20px 15px;	
+		max-width: 226px;
+		max-height: 50px;
+		background: url("/static/img/pokus/input_background.png") no-repeat center !important;	
+		-webkit-background-size: contain;
+		-moz-background-size: contain;
+		-o-background-size: contain;
+		background-size: contain;
+		color: #f1b662 !important;		
+		text-align: center !important;	
+
+	}
+	.form-control,
+	.form-control:hover,
+	.form-control:focus,
+	.form-control:active {
+		box-shadow: inset 0 1px 1px rgba(0,0,0,0), 0 0 8px rgba(102, 175, 233, 0);
+		border: transparent;
+	}
+	label {
 		color: #ffffff;
+		font-weight: 500;
 	}
 </style>
 {% endblock css %}
@@ -51,58 +91,43 @@
 
 {% block main_content %}
 <section class="container-fluid">
-	<div class="row">
-		<div id="index" class="container-fluid">			
+	<div class="row text-center">
+		<div id="index" class="col-xs-12">
 			{% if session.user %}
+			{% if user.saves %}
 			<div class="row">
 				<div class="col-xs-12 text-center">
-					<a class="btn" href="#">Continue</a>
+					<button class="btn">Load</button>
 				</div>
 			</div>
+			{% endif %}
+			<br>
 			<div class="row">
 				<div class="col-xs-12 text-center">
-					<a class="btn" href="#">Log Out</a>
+					<a class="btn" href="/new_game">New Game</a>
+				</div>
+			</div>
+			<br>
+			<div class="row">
+				<div class="col-xs-12 text-center">
+					<a class="btn" href="/logout">Log Out</a>
 				</div>
 			</div>
 			{% else %}
 			<div class="row">
 				<div class="col-xs-12 text-center">
-					<a class="btn" href="#">Login</a>
+					<button onclick="fade_out_in('#index', 700, true, '#log-in-form')" class="btn">Login</button>
 				</div>
 			</div>
-			<hr>
+			<br>
 			<div class="row">
 				<div class="col-xs-12 text-center">
-					<a class="btn" href="#">Register</a>
+					<button onclick="fade_out_in('#index', 700, true, '#register-form')" class="btn">Register</button>
 				</div>
 			</div>
 			{% endif %}
 		</div>
+		{% include "forms.html" %}
 	</div>
 </section>
 {% endblock main_content %}
-
-
-<!--
-<form>
-	<div class="form-group">
-		<label for="exampleInputEmail1">Email address</label>
-		<input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
-	</div>
-	<div class="form-group">
-		<label for="exampleInputPassword1">Password</label>
-		<input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-	</div>
-	<div class="form-group">
-		<label for="exampleInputFile">File input</label>
-		<input type="file" id="exampleInputFile">
-		<p class="help-block">Example block-level help text here.</p>
-	</div>
-	<div class="checkbox">
-		<label>
-			<input type="checkbox"> Check me out
-		</label>
-	</div>
-	<button type="submit" class="btn btn-default">Submit</button>
-</form>
--->

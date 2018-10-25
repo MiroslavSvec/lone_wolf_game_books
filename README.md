@@ -15,3 +15,8 @@ However I lost around 70 pushes accross 3 branches in total.
 - Added fundamentals for Flask back-end
 - Restored all the previous work and merge it to this repository
 - Created fundamentals for index.html
+
+### 0.2 
+
+- Added simple user handling / storage and sessions with Flask and MongoDB
+- Added Fade in Out out helper JS animation as I will use it in the book as well

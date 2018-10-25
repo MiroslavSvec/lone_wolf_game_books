@@ -7,7 +7,7 @@ const uglify = require("gulp-uglify");
 gulp.task('scripts', function () {
 	gulp.src('src/lone-wolf/js/*.js')
 		.pipe(concat('main.js'))
-		.pipe(uglify()) 
+		//.pipe(uglify()) 
 		.pipe(gulp.dest('static/js'));
 });
 
