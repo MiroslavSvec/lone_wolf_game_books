@@ -34,20 +34,20 @@ def index():
             hashed_pass = generate_password_hash(request.form['password'])
             users_collection.insert_one({
                 "user_name": request.form['user_name'],
-                "email": request.form['email'],
+                "email": "",
                 "password": hashed_pass,
                 "saves": [],
             })
             session['user'] = request.form['user_name']
-            return redirect(url_for("book", user=users_collection.find_one(
-                {"user_name": request.form['user_name']})))
+            flash(f"Account {session['user']} created ...")
+            return redirect(url_for('index'))
         else:
             return "Passwords must match"
     else:
         if 'user' in session:
             return render_template('index.html', user=users_collection.find_one({"user_name": session['user']}))
         else:
-            return render_template('index.html', )
+            return render_template('index.html')
 
 
 @app.route('/login', methods=['GET', 'POST'])
@@ -60,9 +60,9 @@ def login():
             if check_password_hash(user_in_db['password'], password):
                 session['user'] = user_name
                 flash(f"Logged in as {user_name}")
-                return "success"
+                return redirect(url_for('index'))
             else:
-                return "Invalid user_name or password"
+                return "Invalid user name and / or password"
         else:
             return f"Sorry no profile {request.form['password']} found"
 

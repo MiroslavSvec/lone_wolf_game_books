@@ -32,3 +32,29 @@ function fade_out_in(element, speed, fade_in, fade_in_ele) {
 
 
 
+
+/*
+Alerts modal
+*/
+
+$(document).ready(function() {
+	flashed_messages();
+});
+
+function alerts(message) {
+	$("#messages").html(`<p>${message}</p>`);
+	$("#alerts").slideDown(1500);
+	setTimeout(() => {
+		$("#alerts").slideUp(1500);
+	}, 4000);
+}
+
+function flashed_messages() {
+	let messages = parseInt($("#messages p").length);
+	if (messages) {
+		$("#alerts").slideDown(1500);
+		setTimeout(() => {
+			$("#alerts").slideUp(1500);
+		}, 5000);
+	}
+}

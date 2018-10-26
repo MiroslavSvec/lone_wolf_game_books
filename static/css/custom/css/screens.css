@@ -8,12 +8,10 @@
 @media (min-width: 350px) {
 }
 
-@media (max-width: 1023px) {
-	#main button {
-		margin: 10px 0px;
-	}
+@media (max-width: 1023px) {	
+	#main button,
 	.form-group{
-		margin-bottom: 0;
+		margin: 1.5px 0px;
 	} 
 	.icon-border {
 		opacity: 1;
