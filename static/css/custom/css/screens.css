@@ -9,7 +9,10 @@
 }
 
 @media (max-width: 1023px) {
-	#register-form .form-group{
+	#main button {
+		margin: 10px 0px;
+	}
+	.form-group{
 		margin-bottom: 0;
 	} 
 	.icon-border {

@@ -21,3 +21,7 @@ However I lost around 70 pushes accross 3 branches in total.
 - Added simple user handling / storage and sessions with Flask and MongoDB
 - Added Fade in Out out helper JS animation as I will use it in the book as well
 - Finished index.html
+
+### 0.3
+
+- Added book.html

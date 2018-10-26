@@ -50,7 +50,7 @@ def index():
             return render_template('index.html', )
 
 
-@app.route('/login', methods=['POST'])
+@app.route('/login', methods=['GET', 'POST'])
 def login():
     if request.method == "POST":
         user_name = request.form['password']
@@ -72,6 +72,19 @@ def logout():
     session.pop('user')
     flash("Successfully logged out ...")
     return redirect(url_for("index"))
+
+
+@app.route('/book')
+def book():
+	""" 
+	Main route for the game
+	
+	"""
+	if 'user' in session:
+		return render_template("book.html")
+	else:
+		flash("You must be logged in to play the game!")
+		return redirect(url_for('index'))
 
 
 if __name__ == '__main__':

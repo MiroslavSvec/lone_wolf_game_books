@@ -2,40 +2,47 @@
 
 {% block css %}
 <style>
-	body {
+	#main {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100vh;
 		background: url("/static/img/index-background.png") no-repeat center;
 		-webkit-background-size: cover;
 		-moz-background-size: cover;
 		-o-background-size: cover;
-		background-size: cover;
-		height: 100vh;
+		background-size: cover;		
 	}
+
 	#index,
 	#log-in-form,
 	#register-form {
 		position: absolute;
 		width: 100%;
 		top: 45%
-		
 	}
+
 	#log-in-form,
 	#register-form {
 		display: none;
 	}
+
 	#log-in-form {
-		top: 40%;		
+		top: 40%;
 	}
 
 	#register-form {
-		top: 35%;
+		top: 36%;
 	}
+
 	section {
 		width: 100%;
-		height: 100vh;	
-	}	
+		height: 100vh;
+	}
 
-	
-	.btn {		
+
+	.btn {
 		background: url("/static/img/btn/red_def.png") no-repeat center;
 		-webkit-background-size: contain;
 		-moz-background-size: contain;
@@ -45,12 +52,13 @@
 		opacity: 0.9;
 		min-width: 135px;
 		min-height: 45px;
-		color: #f1b662;	
-		
+		color: #f1b662;
+
 	}
+
 	.btn:hover,
 	.btn:focus {
-		background: url("/static/img/btn/red_def_hover.png") no-repeat center;		
+		background: url("/static/img/btn/red_def_hover.png") no-repeat center;
 		-webkit-background-size: contain;
 		-moz-background-size: contain;
 		-o-background-size: contain;
@@ -59,9 +67,8 @@
 		opacity: 1;
 		min-width: 135px;
 		min-height: 45px;
-		color: #f1b662;	
-	}	
-	
+		color: #f1b662;
+	}
 </style>
 {% endblock css %}
 
