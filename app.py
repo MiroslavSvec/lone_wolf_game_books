@@ -74,7 +74,7 @@ def login():
 def logout():
     session.pop('user')
     flash("Successfully logged out ...")
-    return redirect(url_for("index"))
+    return "success"
 
 
 @app.route('/new-game', methods=['GET'])

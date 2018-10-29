@@ -17,9 +17,11 @@ function create_data() {
 // Log out the user from Flask Session
 
 function log_out() {
-	$.get("/log-out", function(data) {
+	$.get("/logout", function(data) {
 		// For error messages later on
-		console.log(data)
+		if (data=="success") {
+			window.location.reload()
+		}
 	}).fail(function(xhr, status, error) {
 		console.log(xhr);
 		console.log(status);
