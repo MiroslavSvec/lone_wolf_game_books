@@ -40,35 +40,7 @@
 		width: 100%;
 		height: 100vh;
 	}
-
-
-	.btn {
-		background: url("/static/img/btn/red_def.png") no-repeat center;
-		-webkit-background-size: contain;
-		-moz-background-size: contain;
-		-o-background-size: contain;
-		background-size: contain;
-		padding: 10px 6px;
-		opacity: 0.9;
-		min-width: 135px;
-		min-height: 45px;
-		color: #f1b662;
-
-	}
-
-	.btn:hover,
-	.btn:focus {
-		background: url("/static/img/btn/red_def_hover.png") no-repeat center;
-		-webkit-background-size: contain;
-		-moz-background-size: contain;
-		-o-background-size: contain;
-		background-size: contain;
-		padding: 10px 6px;
-		opacity: 1;
-		min-width: 135px;
-		min-height: 45px;
-		color: #f1b662;
-	}
+	
 </style>
 {% endblock css %}
 
@@ -84,32 +56,32 @@
 			{% if user.saves %}
 			<div class="row">
 				<div class="col-xs-12 text-center">
-					<button class="btn">Load</button>
+					<button class="btn-default-red ">Load</button>
 				</div>
 			</div>
 			{% endif %}
 			<br>
 			<div class="row">
 				<div class="col-xs-12 text-center">
-					<a class="btn" href="/new_game">New Game</a>
+					<button class="btn-default-red " onclick=" return new_game()">New Game</button>
 				</div>
 			</div>
 			<br>
 			<div class="row">
 				<div class="col-xs-12 text-center">
-					<a class="btn" href="/logout">Log Out</a>
+					<a class="btn btn-default-red " href="/logout">Log Out</a>
 				</div>
 			</div>
 			{% else %}
 			<div class="row">
 				<div class="col-xs-12 text-center">
-					<button onclick="fade_out_in('#index', 700, true, '#log-in-form')" class="btn">Login</button>
+					<button onclick="fade_out_in('#index', 700, true, '#log-in-form')" class="btn-default-red ">Login</button>
 				</div>
 			</div>
 			<br>
 			<div class="row">
 				<div class="col-xs-12 text-center">
-					<button onclick="fade_out_in('#index', 700, true, '#register-form')" class="btn">Register</button>
+					<button onclick="fade_out_in('#index', 700, true, '#register-form')" class="btn-default-red ">Register</button>
 				</div>
 			</div>
 			{% endif %}
@@ -118,3 +90,8 @@
 	</div>
 </section>
 {% endblock main_content %}
+
+
+{% block footer %}
+  
+{% endblock footer %}

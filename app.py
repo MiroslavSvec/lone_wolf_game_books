@@ -1,9 +1,11 @@
 import os
+from datetime import datetime
 from flask import Flask, render_template, redirect, request, url_for, session, flash, jsonify
 from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
 from werkzeug.security import generate_password_hash, check_password_hash
 
+from schemas import GameData
 app = Flask(__name__)
 
 # mongoDB config
@@ -16,6 +18,7 @@ book_connection = PyMongo(app, uri=book_uri)
 user_connection = PyMongo(app, uri=users_uri)
 
 book_collection = book_connection.db.book_1
+character_creation_collection = book_connection.db.character_creation_b1
 users_collection = user_connection.db.users
 
 
@@ -27,7 +30,7 @@ def index():
         if user_in_db:
             flash(f"Sorry profile {request.form['user_name']} already exist")
             return render_template("index.html")
-		# If not register new user
+        # If not register new user
         password = request.form['password']
         re_password = request.form['re_password']
         if password == re_password:
@@ -74,17 +77,60 @@ def logout():
     return redirect(url_for("index"))
 
 
+@app.route('/new-game', methods=['GET'])
+def new_game():
+    """
+    Main route for creating new game and save
+
+    """
+    if 'user' in session:
+        data = GameData(main_data=False, new_profile=True).__dict__
+        users_collection.update({"user_name": session['user']}, {
+                                '$push': {"saves": data['lw']}})
+        session['save'] = data['lw']
+        return jsonify(data)
+    else:
+        flash("You must be logged in to play the game!")
+        return redirect(url_for('index'))
+
+
+@app.route('/get-data', methods=['GET'])
+def get_data():
+    """
+    Get all game data
+
+    """
+    if 'user' in session:
+        pass
+    else:
+        flash("You must be logged in to play the game!")
+        return redirect(url_for('index'))
+
+
+@app.route('/character-creation')
+def character_creation():
+    """ 
+    Main route for Character Creation
+
+    """
+    if 'user' in session:
+        return render_template("book.html")
+    else:
+        flash("You must be logged in to play the game!")
+        return redirect(url_for('index'))
+
+
 @app.route('/book')
 def book():
-	""" 
-	Main route for the game
-	
-	"""
-	if 'user' in session:
-		return render_template("book.html")
-	else:
-		flash("You must be logged in to play the game!")
-		return redirect(url_for('index'))
+    """ 
+    Main route for the game
+
+    """
+    if 'user' in session:
+        return render_template("book.html")
+    else:
+        flash("You must be logged in to play the game!")
+        return redirect(url_for('index'))
 
 
 if __name__ == '__main__':

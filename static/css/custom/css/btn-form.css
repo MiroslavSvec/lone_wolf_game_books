@@ -1,0 +1,201 @@
+/* 
+
+Buttons 
+
+*/
+
+button {
+    background-color: transparent;
+    border: 0;
+}
+
+.btn {
+    padding: 1px 6px;
+}
+
+.btn:focus,
+.btn:active:focus,
+.btn.active:focus,
+.btn.focus,
+.btn:active.focus,
+.btn.active.focus {
+    outline: none;
+}
+
+/* Menu bottons */
+
+.icon-border {
+    padding: 10px 0px 0px 7px;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 50%;
+    border: 2px solid rgb(190, 116, 35);
+    width: 60px;
+    height: 60px;
+    opacity: 0.7;
+}
+
+.icon-border:hover {
+    opacity: 1;
+}
+
+.icon-wrapper {
+    display: inline-block;
+    padding: 5px;
+}
+
+.btn-setting,
+.btn-book,
+.btn-map,
+.btn-inventory,
+.btn-character {
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    min-width: 40px;
+    min-height: 36px;
+}
+
+/* Setting button */
+
+.btn-setting {
+    background: url("/static/img/btn/setting.png") no-repeat center;
+}
+
+.btn-setting:hover,
+.btn-setting:active {
+    background: url("/static/img/btn/settings_hover.png") no-repeat center;
+}
+
+/* Book button */
+
+.btn-book {
+    background: url("/static/img/btn/ability.png") no-repeat center;
+}
+
+.btn-book:hover,
+.btn-book:active {
+    background: url("/static/img/btn/ability_hover.png") no-repeat center;
+}
+
+/* Map button */
+
+.btn-map {
+    background: url("/static/img/btn/map.png") no-repeat center;
+}
+
+.btn-map:hover,
+.btn-map:active {
+    background: url("/static/img/btn/map_hover.png") no-repeat center;
+}
+
+/* Inventory button */
+
+.btn-inventory {
+    background: url("/static/img/btn/inventory.png") no-repeat center;
+}
+
+.btn-inventory:hover,
+.btn-inventory:active {
+    background: url("/static/img/btn/inventory_hover.png") no-repeat center;
+}
+
+/* Character button */
+
+.btn-character {
+    background: url("/static/img/btn/char.png") no-repeat center;
+}
+
+.btn-character:hover,
+.btn-character:active {
+    background: url("/static/img/btn/char_hover.png") no-repeat center;
+}
+
+/* Main book buttons */
+
+main button {
+    margin: 15px 0;
+    text-decoration: none;
+    color: #dac5c5;
+}
+
+/* Default red btn */
+
+.btn-default-red {
+    background: url("/static/img/btn/red_def.png") no-repeat center;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+    background-size: contain;
+    padding: 10px 6px;
+    opacity: 0.9;
+    min-width: 135px;
+    min-height: 45px;
+    color: #f1b662;
+}
+
+.btn-default-red:hover,
+.btn-default-red:focus {
+    background: url("/static/img/btn/red_def_hover.png") no-repeat center;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+    background-size: contain;
+    padding: 10px 6px;
+    opacity: 1;
+    min-width: 135px;
+    min-height: 45px;
+    color: #f1b662;
+}
+
+/* 
+
+Inputs and forms
+
+*/
+
+.form-group {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+.form-control {
+    padding: 20px 15px;
+    width: 226px;
+    max-height: 50px;
+    background: url("/static/img/pokus/input_background.png") no-repeat center !important;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+    background-size: contain;
+    color: #f1b662 !important;
+    text-align: center !important;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+    border: 1px solid #f1b662;
+    width: max-content;
+    -webkit-text-fill-color: #f1b662;
+    -webkit-box-shadow: 0 0 0px 1000px #2b2116 inset;
+    background-color: transparent
+}
+
+.form-control,
+.form-control:hover,
+.form-control:focus,
+.form-control:active {
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0), 0 0 8px rgba(102, 175, 233, 0);
+    border: transparent;
+}
+
+label {
+    color: #ffffff;
+    font-weight: 500;
+}
