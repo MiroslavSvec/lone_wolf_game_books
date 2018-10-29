@@ -27,6 +27,9 @@ button.focus,
 button:active.focus,
 button.active.focus {
     outline: none !important;
+    outline-color: transparent !important;
+    outline-style: none !important;
+    outline-width: 0px !important;
 }
 
 /* Menu bottons */
