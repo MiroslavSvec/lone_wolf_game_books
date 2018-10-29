@@ -26,7 +26,7 @@ button {
 .btn-default-red.focus,
 .btn-default-red:active.focus,
 .btn-default-red.active.focus {
-    outline: none;
+    outline: none !important;
 }
 
 /* Menu bottons */
