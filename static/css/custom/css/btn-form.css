@@ -18,7 +18,13 @@ button {
 .btn.active:focus,
 .btn.focus,
 .btn:active.focus,
-.btn.active.focus {
+.btn.active.focus,
+.btn-default-red:focus,
+.btn-default-red:active:focus,
+.btn-default-red.active:focus,
+.btn-default-red.focus,
+.btn-default-red:active.focus,
+.btn-default-red.active.focus {
     outline: none;
 }
 

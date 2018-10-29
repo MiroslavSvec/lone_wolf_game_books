@@ -1,15 +1,45 @@
 
 
-// Get data from db
+// Get Character creation data from db and store them in localStorage
+// Redirect user to game if data exists
 function create_data() {
 	$.get("/new-game", function (data) {
 		store_data(data);
+		check_character_creation_data_ls();
 	}).fail(function (xhr, status, error) {
 		console.log(xhr);
 		console.log(status);
 		console.log(error);
 	});
 	return false;
+}
+
+// Log out the user from Flask Session
+
+function log_out() {
+	$.get("/log-out", function(data) {
+		// For error messages later on
+		console.log(data)
+	}).fail(function(xhr, status, error) {
+		console.log(xhr);
+		console.log(status);
+		console.log(error);
+	});
+	return false;
+}
+
+// Check Character creation data in localStorage
+function check_character_creation_data_ls() {
+	if (localStorage.character_creation_data && localStorage.inventory && localStorage.kai_disciplines && localStorage.lone_wolf) {
+		window.location.replace("/character-creation");
+	} else {
+		console.log(localStorage.character_creation_data);
+		console.log(localStorage.inventory);
+		console.log(localStorage.kai_disciplines);
+		console.log(localStorage.lone_wolf);
+		let message = "Some of the data could not be saved...";
+		alerts(message);
+	}
 }
 
 // Push Data TO localStorage

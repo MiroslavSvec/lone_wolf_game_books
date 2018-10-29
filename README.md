@@ -30,4 +30,5 @@ However I lost around 70 pushes accross 3 branches in total.
 - Added schema.py for Game profile, inventory and kai disciplines
 - FE now getting the game data from BE and storing them in `localStorage`
 - Added `btn-form.css` to separate the CSS rulles from `main.css`
-- Addedmore CSS rules and fixed some layout issues
+- Added more CSS rules and fixed some layout issues.
+- Fixed minor bugs with creating game and CSS styles

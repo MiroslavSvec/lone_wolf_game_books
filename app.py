@@ -85,8 +85,8 @@ def new_game():
     """
     if 'user' in session:
         data = GameData(main_data=False, new_profile=True).__dict__
-        users_collection.update({"user_name": session['user']}, {
-                                '$push': {"saves": data['lw']}})
+        users_collection.update({"user_name": session['user']}, 
+			{'$push': {"saves": data['lw']}})
         session['save'] = data['lw']
         return jsonify(data)
     else:

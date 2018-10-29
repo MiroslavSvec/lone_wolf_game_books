@@ -183,6 +183,7 @@ footer {
 }
 
 #alerts p {
+	text-align: center;
     margin: 10px 0px;
     color: #f1b662;
 }
