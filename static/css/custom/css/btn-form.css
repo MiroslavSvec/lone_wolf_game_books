@@ -20,12 +20,12 @@ button {
 .btn.focus,
 .btn:active.focus,
 .btn.active.focus,
-.btn-default-red:focus,
-.btn-default-red:active:focus,
-.btn-default-red.active:focus,
-.btn-default-red.focus,
-.btn-default-red:active.focus,
-.btn-default-red.active.focus {
+button:focus,
+button:active:focus,
+button.active:focus,
+button.focus,
+button:active.focus,
+button.active.focus {
     outline: none !important;
 }
 
