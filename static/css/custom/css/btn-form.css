@@ -11,6 +11,7 @@ button {
 
 .btn {
     padding: 1px 6px;
+    outline: none;
 }
 
 .btn:focus,
@@ -133,6 +134,7 @@ main button {
     -moz-background-size: contain;
     -o-background-size: contain;
     background-size: contain;
+    outline: none;
     padding: 10px 6px;
     opacity: 0.9;
     min-width: 135px;
@@ -190,6 +192,7 @@ select:-webkit-autofill:focus {
     width: max-content;
     -webkit-text-fill-color: #f1b662;
     -webkit-box-shadow: 0 0 0px 1000px #2b2116 inset;
+    box-shadow: 0 0 0px 1000px #2b2116 inset;
     background-color: transparent
 }
 
