@@ -2,15 +2,15 @@
 General
 */
 
-
-
 p {
     color: #000000;
     padding-bottom: 15px;
 }
 
 h2 {
+    font-family: "Norican", cursive;
     font-weight: 700;
+    color: #f1b662;
 }
 
 body {
@@ -26,7 +26,7 @@ body {
 Nav + Footer
 */
 
-footer,
+#footer,
 nav {
     position: fixed;
     padding: 15px 15px 0;
@@ -34,24 +34,20 @@ nav {
     left: 0;
 }
 
-
 /*
 Nav
 */
 
 nav {
     top: 0;
-	width: 100%;	
-	z-index: 1000;
+    width: 100%;
+    z-index: 1000;
 }
 
 .navbar-right {
-    padding-right: 15px;
+    padding-right: 80px;
 }
 
-#main {
-    min-height: 100vh;
-}
 
 /*
 Book 
@@ -106,27 +102,40 @@ Book
     background-size: cover;
 }
 
-
-
 /* 
 Map 
 */
 
 .map-wrapper {
-    width: auto;
+    margin: 15px 0;
+    padding: 0 30px;
     border: 2px solid rgb(190, 116, 35);
     border-radius: 15px;
-    background: url("../../../img/pc/map_bg.png") center;
+    background: url("../../../img/pc/map_bg.png") no-repeat center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
 }
 
-.map-wrapper img {
-    text-align: center;
-    margin: 15px;
-    max-height: 700px;
+#pc-map {
+    background: url("../../../img/pc/map.png") no-repeat center;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+    background-size: contain;
+    height: 80vh;
+    width: 100%;
+}
+
+#mobile-map {
+    background: url("../../../img/mobile/map.png") no-repeat center;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+    background-size: contain;
+    height: 80vh;
+    width: 100%;
 }
 
 /*
@@ -184,7 +193,7 @@ footer {
 }
 
 #alerts p {
-	text-align: center;
+    text-align: center;
     margin: 10px 0px;
     color: #f1b662;
 }

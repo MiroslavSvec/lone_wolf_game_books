@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block css %}
+  <style>
+	  #footer {
+		  position: relative;
+	  }
+
+  </style>
+{% endblock css %}
+
+{% block main_content %}
+
+
+<section id="map" class="container-fluid">
+	<div class="row">
+		<div class="col-xs-12 col-sm-6 col-sm-offset-3">
+			<div class="row">
+				<div class="map-wrapper col-xs-12">
+					<div class="row">
+						<h2 class="text-center">Map of the Lastlands</h2>
+						<div class="book-hr col-xs-12"></div>
+					</div>
+					<!-- Mobile Map -->
+					<div class="row">
+						<div id="mobile-map" class="hidden-lg"></div>
+					</div>
+					<!-- PC Map -->
+					<div class="row">
+						<div id="pc-map" class="visible-lg"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+{% endblock main_content %}

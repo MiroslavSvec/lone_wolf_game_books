@@ -86,7 +86,7 @@ def new_game():
     if 'user' in session:
         data = GameData(main_data=False, new_profile=True).__dict__
         users_collection.update({"user_name": session['user']},
-			{'$push': {"saves": data['lw']}})
+                                {'$push': {"saves": data['lw']}})
         session['save'] = data['lw']
         return jsonify(data)
     else:
@@ -114,7 +114,7 @@ def character_creation():
 
     """
     if 'user' in session:
-        return render_template("book.html")
+        return render_template("character-creation.html", book_url="/character-creation")
     else:
         flash("You must be logged in to play the game!")
         return redirect(url_for('index'))
@@ -133,6 +133,21 @@ def book():
         return redirect(url_for('index'))
 
 
+@app.route('/map')
+def map():
+    """
+    Main route for Map view
+
+    """
+    if 'user' in session:
+        if session['save']['character_creation'] == True:
+            return render_template("map.html", book_url="/character-creation")
+        return render_template("map.html", book_url="/book")
+    else:
+        flash("You must be logged in to view the content of the game game!")
+        return redirect(url_for('index'))
+
+
 @app.route('/reset')
 def reset():
     """
@@ -141,11 +156,10 @@ def reset():
     """
     if 'user' in session:
         session.pop('user')
-    if 'save' in session: 
+    if 'save' in session:
         session.pop('save')
     flash("All data cleared ...")
     return "success"
-
 
 
 if __name__ == '__main__':

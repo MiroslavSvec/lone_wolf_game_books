@@ -6,8 +6,8 @@
 
 @media (max-width: 770px) {
     .mobile>.row {
-		position: relative;
-	}
+        position: relative;
+    }
 }
 
 @media (max-width: 1023px) {

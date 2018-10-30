@@ -33,3 +33,7 @@ However I lost around 70 pushes accross 3 branches in total.
 - Added more CSS rules and fixed some layout issues.
 - Fixed minor bugs with creating game and CSS styles
 - Added "Clear all data" functionality for desting and debuging
+
+### 0.4
+
+- Added `map.html`
