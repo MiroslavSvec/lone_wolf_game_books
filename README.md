@@ -32,3 +32,4 @@ However I lost around 70 pushes accross 3 branches in total.
 - Added `btn-form.css` to separate the CSS rulles from `main.css`
 - Added more CSS rules and fixed some layout issues.
 - Fixed minor bugs with creating game and CSS styles
+- Added "Clear all data" functionality for desting and debuging

@@ -85,7 +85,7 @@ def new_game():
     """
     if 'user' in session:
         data = GameData(main_data=False, new_profile=True).__dict__
-        users_collection.update({"user_name": session['user']}, 
+        users_collection.update({"user_name": session['user']},
 			{'$push': {"saves": data['lw']}})
         session['save'] = data['lw']
         return jsonify(data)
@@ -109,7 +109,7 @@ def get_data():
 
 @app.route('/character-creation')
 def character_creation():
-    """ 
+    """
     Main route for Character Creation
 
     """
@@ -122,7 +122,7 @@ def character_creation():
 
 @app.route('/book')
 def book():
-    """ 
+    """
     Main route for the game
 
     """
@@ -131,6 +131,21 @@ def book():
     else:
         flash("You must be logged in to play the game!")
         return redirect(url_for('index'))
+
+
+@app.route('/reset')
+def reset():
+    """
+    Clear and reset data
+
+    """
+    if 'user' in session:
+        session.pop('user')
+    if 'save' in session: 
+        session.pop('save')
+    flash("All data cleared ...")
+    return "success"
+
 
 
 if __name__ == '__main__':

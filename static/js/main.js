@@ -98,6 +98,21 @@ function clear_local_storage() {
 }
 
 
+// Hard reset data and page
+
+function reset_data() {
+	$.get("/reset", function (data) {
+		// For error messages later on
+		if (data == "success") {
+			clear_local_storage();
+		}
+	}).fail(function (xhr, status, error) {
+		console.log(xhr);
+		console.log(status);
+		console.log(error);
+	});
+	return false;
+}
 
 /* 
 Start new game

@@ -66,6 +66,14 @@ button.active.focus {
     min-height: 36px;
 }
 
+/* Reset the page */
+
+.fa-bug,
+.fa-bug:hover,
+.fa-bug:active {
+	color: #f1b662;
+}
+
 /* Setting button */
 
 .btn-setting {
