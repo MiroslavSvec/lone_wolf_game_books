@@ -40,7 +40,9 @@
 		width: 100%;
 		height: 100vh;
 	}
-	
+	#footer .col-xs-1 {
+		margin-right: 20%;
+	}
 </style>
 {% endblock css %}
 
@@ -102,5 +104,13 @@
 
 
 {% block footer %}
-  
+  <div class="row">
+	<div class="col-xs-1 hidden-md hidden-lg pull-right">
+		<div class="icon-wrapper col-xs-12">
+			<div class="icon-border">
+				<button onclick="return reset_data()" class="btn"><i class="fas fa-bug fa-2x"></i></button>
+			</div>
+		</div>
+	</div>
+  </div>
 {% endblock footer %}
